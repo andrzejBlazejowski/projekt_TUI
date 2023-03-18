@@ -68,29 +68,47 @@
         </Menu>
 
         <ToolBar Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Background="#CDFCF6" >
-            <ToggleButton Width="35" Height="35" Padding="3" Background="#BCCEF8">
+            <ToggleButton Width="35" Height="35" Padding="3" Background="#BCCEF8" ToolTip="Dodaj">
                 <Image Width="29" Height="29" Source="images/icons/plus-solid.png" />
-            </ToggleButton>            <ToggleButton Width="35" Height="35" Padding="3" Background="#BCCEF8">
+            </ToggleButton>            <ToggleButton Width="35" Height="35" Padding="3" Background="#BCCEF8" ToolTip="Usuń">
                 <Image Width="29" Height="29" Source="images/icons/minus-solid.png" />
-            </ToggleButton>            <ToggleButton Width="35" Height="35" Padding="3" Background="#BCCEF8">
+            </ToggleButton>            <ToggleButton Width="35" Height="35" Padding="3" Background="#BCCEF8" ToolTip="Odśwież">
                 <Image Width="29" Height="29" Source="images/icons/arrows-rotate-solid.png" />
-            </ToggleButton>            <ToggleButton Width="35" Height="35" Padding="3" Background="#BCCEF8">
+            </ToggleButton>            <ToggleButton Width="35" Height="35" Padding="3" Background="#BCCEF8" ToolTip="Opcje">
                 <Image Width="29" Height="29" Source="images/icons/gear-solid.png" />
-            </ToggleButton>            <ToggleButton Width="35" Height="35" Padding="3" Background="#BCCEF8">
+            </ToggleButton>            <ToggleButton Width="35" Height="35" Padding="3" Background="#BCCEF8" ToolTip="Lista">
                 <Image Width="29" Height="29" Source="images/icons/list-solid.png" />
-            </ToggleButton>            <ToggleButton Width="35" Height="35" Padding="3" Background="#BCCEF8">
-                <Image Width="29" Height="29" Source="images/icons/filter-solid.png" />
-            </ToggleButton>            <ToggleButton Width="35" Height="35" Padding="3" Background="#BCCEF8">
-                <Image Width="29" Height="29" Source="images/icons/arrow-up-short-wide-solid.png" />
-            </ToggleButton>            <ToggleButton Width="35" Height="35" Padding="3" Background="#BCCEF8">
-                <Image Width="29" Height="29" Source="images/icons/arrow-up-wide-short-solid.png" />
-            </ToggleButton>            <ToggleButton Width="35" Height="35" Padding="3" Background="#BCCEF8">
+            </ToggleButton>            <ToggleButton Width="auto" Height="35" Padding="3" Background="#BCCEF8" ToolTip="Filtruj">
+                <StackPanel Orientation="Horizontal">
+                    <ComboBox>
+                        <ComboBoxItem IsSelected="True">Nazwa</ComboBoxItem>
+                    </ComboBox>
+                    <TextBox Width="70" TextWrapping="Wrap"  Background="#CDFCF6"/>
+                    <Image Width="29" Height="29" Source="images/icons/filter-solid.png" />
+                </StackPanel>
+            </ToggleButton>            <ToggleButton Width="auto" Height="35" Padding="3" Background="#BCCEF8" ToolTip="Sortuj rosnąco">
+                <StackPanel Orientation="Horizontal">
+                    <ComboBox>
+                        <ComboBoxItem IsSelected="True">Nazwa</ComboBoxItem>
+                    </ComboBox>
+                    <Image Width="29" Height="29" Source="images/icons/arrow-up-short-wide-solid.png" />
+                </StackPanel>
+            </ToggleButton>            <ToggleButton Width="auto" Height="35" Padding="3" Background="#BCCEF8"  ToolTip="Sortuj malejąco">
+                <StackPanel Orientation="Horizontal">
+                    <ComboBox>
+                        <ComboBoxItem IsSelected="True">Nazwa</ComboBoxItem>
+                    </ComboBox>
+                    <Image Width="29" Height="29" Source="images/icons/arrow-up-wide-short-solid.png" />
+                </StackPanel>
+            </ToggleButton>            <ToggleButton Width="35" Height="35" Padding="3" Background="#BCCEF8" ToolTip="Generuj Raport">
                 <Image Width="29" Height="29" Source="images/icons/file-invoice-dollar-solid.png" />
             </ToggleButton>        </ToolBar>
 
         
         <Border Grid.Row="2" Grid.Column="0">
-            <HeaderedContentControl Header="menu boczne"/>
+            <HeaderedContentControl Header="menu boczne">
+            </HeaderedContentControl>
+
         </Border>
         <Border Grid.Row="2" Grid.Column="1">
             <HeaderedContentControl Header="content">
