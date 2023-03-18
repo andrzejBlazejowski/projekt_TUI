@@ -7,6 +7,94 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
 
+        <Menu Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="2" Padding="5">
+            <MenuItem Header="_Sprzedaż" Padding="10 5">
+                <MenuItem Header="_Zamówienia"/>
+                <MenuItem Header="_Produkty"/>
+                <MenuItem Header="_Klienci"/>
+                <MenuItem Header="_Obsługa Klienta"/>
+                <MenuItem Header="_Statystyki"/>
+            </MenuItem>
+            <MenuItem Header="_CRM - Customer Relationship Management" Padding="10 5">
+                <MenuItem Header="_Kontrachenci"/>
+                <MenuItem Header="_Faktury"/>
+                <Separator/>
+                <MenuItem Header="_Statystyki"/>
+                <MenuItem Header="_Raporty"/>
+                <MenuItem Header="_Oferty"/>
+                <MenuItem Header="_Dokumenty"/>
+            </MenuItem>
+            <MenuItem Header="_Magazyn" Padding="5">
+                <MenuItem Header="_WZ wydanie zewnętrzne"/>
+                <MenuItem Header="WM wydanie magazynowe"/>
+                <MenuItem Header="_PZ przyjecia zewnetrzne"/>
+                <MenuItem Header="PM przyjecia magazynowe"/>
+                <Separator/>
+                <MenuItem Header="_Stan Magazynowy"/>
+            </MenuItem>
+            <MenuItem Header="_Ulepszenia" Padding="10 5">
+                <MenuItem Header="_Moduły"/>
+                <MenuItem Header="_Wygląd"/>
+                <MenuItem Header="_Języki"/>
+                <Separator/>
+                <MenuItem Header="_Dostawa"/>
+                <MenuItem Header="_Płatności"/>
+                <MenuItem Header="_Marketing"/>
+            </MenuItem>
+            <MenuItem Header="_Konfiguruj" Padding="10 5">
+                <MenuItem Header="_Preferencje"/>
+                <MenuItem Header="_Zawansowane"/>
+            </MenuItem>
+            <MenuItem Header="_Pomoc" Padding="10 5">
+                <MenuItem Header="_FAQ"/>
+                <MenuItem Header="_Dokumentacja"/>
+                <MenuItem Header="_Porady"/>
+                <Separator/>
+                <MenuItem Header="_Kontakt"/>
+                <MenuItem Header="_Informacje o aplikacji"/>
+            </MenuItem>
+        </Menu>
+        
+        <ToolBar Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+            <ToggleButton Width="auto" Height="35"/>
+        </ToolBar>
+
+        
+        <Border Grid.Row="2" Grid.Column="0">
+            <HeaderedContentControl Header="menu boczne"/>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="1">
+            <HeaderedContentControl Header="content"/>
+        </Border>
+
+
+        <StatusBar Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Padding="5">
+            <StatusBarItem>
+                <TextBlock>Andrzej Błażejowski</TextBlock>
+            </StatusBarItem>
+            <Separator/>
+            <StatusBarItem>
+                <TextBlock>WSB-NLU</TextBlock>
+            </StatusBarItem>
+            <Separator/>
+            <StatusBarItem>
+               <!--Ikonka dzwonka wraz z cyferką -->
+            </StatusBarItem>
+            <Separator/>
+            <StatusBarItem HorizontalAlignment="Right">
+                <ProgressBar Width="300" Height="5" Minimum="0" Maximum="100" Value="75" IsIndeterminate="True" />
+            </StatusBarItem>
+        </StatusBar>
     </Grid>
 </Window>
