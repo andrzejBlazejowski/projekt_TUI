@@ -8,13 +8,35 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="arrow-up-short-wide-solid.png" />
+    <None Remove="arrow-up-wide-short-solid.png" />
+    <None Remove="arrows-rotate-solid.png" />
     <None Remove="bell.png" />
+    <None Remove="file-invoice-dollar-solid.png" />
+    <None Remove="filter-solid.png" />
+    <None Remove="gear-solid.png" />
+    <None Remove="images\icons\bell.png" />
+    <None Remove="images\icons\minus-solid.png" />
+    <None Remove="images\icons\question.png" />
+    <None Remove="list-solid.png" />
+    <None Remove="minus-solid.png" />
+    <None Remove="person-digging-solid.png" />
     <None Remove="question.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="bell.png" />
-    <Resource Include="question.png" />
+    <Resource Include="images\icons\file-invoice-dollar-solid.png" />
+    <Resource Include="images\icons\arrow-up-wide-short-solid.png" />
+    <Resource Include="images\icons\arrow-up-short-wide-solid.png" />
+    <Resource Include="images\icons\filter-solid.png" />
+    <Resource Include="images\icons\gear-solid.png" />
+    <Resource Include="images\icons\arrows-rotate-solid.png" />
+    <Resource Include="images\icons\bell.png" />
+    <Resource Include="images\icons\minus-solid.png" />
+    <Resource Include="images\icons\question.png" />
+    <Resource Include="images\icons\plus-solid.png" />
+    <Resource Include="images\icons\list-solid.png" />
+    <Resource Include="images\icons\person-digging-solid.png" />
   </ItemGroup>
 
 </Project>

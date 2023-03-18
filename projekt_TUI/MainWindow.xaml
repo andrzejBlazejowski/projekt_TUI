@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:projekt_TUI"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#FAF7F0">
+        <!--color theme : https://colorhunt.co/palette/faf7f0cdfcf6bccef898a8f8-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150"/>
             <ColumnDefinition Width="*"/>
@@ -65,17 +66,37 @@
                 <MenuItem Header="_Informacje o aplikacji"/>
             </MenuItem>
         </Menu>
-        
-        <ToolBar Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
-            <ToggleButton Width="auto" Height="35"/>
-        </ToolBar>
+
+        <ToolBar Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Background="#CDFCF6" >
+            <ToggleButton Width="35" Height="35" Padding="3" Background="#BCCEF8">
+                <Image Width="29" Height="29" Source="images/icons/plus-solid.png" />
+            </ToggleButton>            <ToggleButton Width="35" Height="35" Padding="3" Background="#BCCEF8">
+                <Image Width="29" Height="29" Source="images/icons/minus-solid.png" />
+            </ToggleButton>            <ToggleButton Width="35" Height="35" Padding="3" Background="#BCCEF8">
+                <Image Width="29" Height="29" Source="images/icons/arrows-rotate-solid.png" />
+            </ToggleButton>            <ToggleButton Width="35" Height="35" Padding="3" Background="#BCCEF8">
+                <Image Width="29" Height="29" Source="images/icons/gear-solid.png" />
+            </ToggleButton>            <ToggleButton Width="35" Height="35" Padding="3" Background="#BCCEF8">
+                <Image Width="29" Height="29" Source="images/icons/list-solid.png" />
+            </ToggleButton>            <ToggleButton Width="35" Height="35" Padding="3" Background="#BCCEF8">
+                <Image Width="29" Height="29" Source="images/icons/filter-solid.png" />
+            </ToggleButton>            <ToggleButton Width="35" Height="35" Padding="3" Background="#BCCEF8">
+                <Image Width="29" Height="29" Source="images/icons/arrow-up-short-wide-solid.png" />
+            </ToggleButton>            <ToggleButton Width="35" Height="35" Padding="3" Background="#BCCEF8">
+                <Image Width="29" Height="29" Source="images/icons/arrow-up-wide-short-solid.png" />
+            </ToggleButton>            <ToggleButton Width="35" Height="35" Padding="3" Background="#BCCEF8">
+                <Image Width="29" Height="29" Source="images/icons/file-invoice-dollar-solid.png" />
+            </ToggleButton>        </ToolBar>
 
         
         <Border Grid.Row="2" Grid.Column="0">
             <HeaderedContentControl Header="menu boczne"/>
         </Border>
         <Border Grid.Row="2" Grid.Column="1">
-            <HeaderedContentControl Header="content"/>
+            <HeaderedContentControl Header="content">
+                <Image Width="300" Height="300" Source="images/icons/person-digging-solid.png" />
+            </HeaderedContentControl>
+
         </Border>
 
 
@@ -95,7 +116,7 @@
                             <Setter Property="Margin" Value="5,0,0,0"/>
                         </Style>
                     </StackPanel.Resources>
-                    <Image Source="/bell.png" Stretch="Fill" Width="15" Height="15" />
+                    <Image Source="images/icons/bell.png" Stretch="Fill" Width="15" Height="15" />
                     <TextBlock>2</TextBlock>
                     <TextBlock>nowe powiadomienia</TextBlock>
                 </StackPanel>
@@ -111,7 +132,7 @@
                             <Setter Property="Margin" Value="5,0,0,0"/>
                         </Style>
                     </StackPanel.Resources>
-                    <Image Source="/question.png" Stretch="Fill" Width="15" Height="15"/>
+                    <Image Source="images/icons/question.png" Stretch="Fill" Width="15" Height="15"/>
                     <TextBlock>Pomoc</TextBlock>
                 </StackPanel>
             </StatusBarItem>
