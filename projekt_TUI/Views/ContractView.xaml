@@ -1,0 +1,205 @@
+﻿<UserControl x:Class="projekt_TUI.Views.AllItemsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:projekt_TUI.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="880" d:DesignWidth="1450">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="400"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0">Dokument</Button>
+            <ComboBox Grid.Column="1">
+                <ComboBoxItem IsSelected="True">CRM</ComboBoxItem>
+            </ComboBox>
+            <StackPanel Grid.Column="2" Orientation="Horizontal">
+                <Label>Numer :</Label>
+                <TextBox IsEnabled="False">CRM</TextBox>
+                <TextBox>2</TextBox>
+                <TextBox IsEnabled="False">2023</TextBox>
+            </StackPanel>
+        </Grid>
+        <StackPanel Grid.Row="1">
+            <Expander Header="Kontrachent" IsExpanded="True">
+                <StackPanel>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="400"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        
+                        <ComboBox Grid.Column="0" Grid.Row="0">
+                            <ComboBoxItem IsSelected="True">Kontrachent</ComboBoxItem>
+                        </ComboBox>
+                        <ComboBox Grid.Column="1" Grid.Row="0">
+                            <ComboBoxItem IsSelected="True">Eustachy</ComboBoxItem>
+                        </ComboBox>
+                        <TextBox Grid.Column="2" Grid.Row="0" >Eustachy Sp.z.o.o</TextBox>
+
+                        <Label Grid.Column="0" Grid.Row="1">Osoba kontaktowa: </Label>
+                        <ComboBox Grid.Column="1" Grid.Row="1">
+                            <ComboBoxItem IsSelected="True">Konrad Gogoliński</ComboBoxItem>
+                        </ComboBox>
+                        <StackPanel Grid.Column="2" Grid.Row="1" Orientation="Horizontal">
+                            <TextBox IsEnabled="False">+43 347 034 123</TextBox>
+                            <TextBox IsEnabled="False">k.Gog@eustachy.pl</TextBox>
+                        </StackPanel>
+
+                        <ComboBox Grid.Column="0" Grid.Row="2">
+                            <ComboBoxItem IsSelected="True">Operator</ComboBoxItem>
+                        </ComboBox>
+                        <ComboBox Grid.Column="1" Grid.Row="2">
+                            <ComboBoxItem IsSelected="True">Wiesław z IT</ComboBoxItem>
+                        </ComboBox>
+                        <StackPanel Grid.Column="2" Grid.Row="2" Orientation="Horizontal">
+                            <TextBox IsEnabled="False">+43 347 034 123</TextBox>
+                            <TextBox IsEnabled="False">wieslaw.IT@mojaFirma.pl</TextBox>
+                        </StackPanel>
+
+                    </Grid>
+                </StackPanel>
+            </Expander>
+            
+            <Expander Header="Temat" IsExpanded="True">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label >Temat : </Label>
+                        <TextBox>Przygotowanie Oferty handlowej</TextBox>
+                    </StackPanel>
+                    <TextBlock Height="400">
+                        
+                    </TextBlock>
+                </StackPanel>
+            </Expander>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="600"/>
+                    <ColumnDefinition Width="600"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Expander Grid.Column="0"  Header="Zadanie" IsExpanded="True">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="4*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right">
+                            <Label>Priorytet:</Label>
+                            <ComboBox>
+                                <ComboBoxItem IsSelected="True">Najwyżzszy</ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>
+
+                        <Label Grid.Column="0" Grid.Row="1">Termin Od: </Label>
+                        <Grid Grid.Column="1" Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <DatePicker Grid.Column="0"></DatePicker>
+                            <TextBox  Grid.Column="1">11:00</TextBox>
+                        </Grid>
+
+
+
+                        <Label Grid.Column="0" Grid.Row="2">Termin Do:</Label>
+                        <Grid Grid.Column="1" Grid.Row="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <DatePicker Grid.Column="0"></DatePicker>
+                            <TextBox  Grid.Column="1">11:00</TextBox>
+                        </Grid>
+                        
+                        <Label Grid.Column="0" Grid.Row="3">Przypisany do:</Label>
+                        <ComboBox Grid.Column="1" Grid.Row="3">
+                            <ComboBoxItem IsSelected="True">Konrad Gogoliński</ComboBoxItem>
+                        </ComboBox>
+                    </Grid>
+                </Expander>
+
+                <Expander Grid.Column="1" Header="Data/Czas" IsExpanded="True">
+                    <StackPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0">Data Rozpoczęcia :</Label>
+                            <DatePicker Grid.Column="1"></DatePicker>
+                            <TextBox  Grid.Column="2">11:00</TextBox>
+                        </Grid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <Button Grid.Column="0" Grid.Row="0">Czas kontraktu :</Button>
+                            <TextBox Grid.Column="1" Grid.Row="0" IsEnabled="False">1h</TextBox>
+
+                            <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal">
+                                <Label>Czas Bieżący :</Label>
+                                <Button>start timer</Button>
+                            </StackPanel>
+                            <TextBox Grid.Column="1" Grid.Row="1" IsEnabled="False">1h</TextBox>
+
+
+                            <Label Grid.Column="0" Grid.Row="2" >Wykonany procent :</Label>
+                            <TextBox Grid.Column="1" Grid.Row="2">10%</TextBox>
+
+                        </Grid>
+                    </StackPanel>
+                </Expander>
+
+                <Expander Grid.Column="2" Header="Obsługa" IsExpanded="True">
+                    <StackPanel>
+                        <RadioButton Content="Przed sprzedażą" GroupName="Options" Checked="RadioButton_Checked" />
+                        <RadioButton Content="Po sprzedaży" GroupName="Options" Checked="RadioButton_Checked" />
+                    </StackPanel>
+                </Expander>
+
+            </Grid>
+
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="600"/>
+                    <ColumnDefinition Width="600"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>

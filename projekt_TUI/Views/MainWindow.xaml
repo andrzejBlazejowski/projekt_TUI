@@ -13,7 +13,8 @@
         <!--color theme : https://colorhunt.co/palette/faf7f0cdfcf6bccef898a8f8-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="151*"/>
+            <ColumnDefinition Width="139*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -22,7 +23,7 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
-        <Menu Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="2" Padding="5">
+        <Menu Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="3" Padding="5" Margin="0,0,0,40" Grid.RowSpan="2">
             <MenuItem Header="_Sprzedaż" Style="{StaticResource MenuItemWithPadding}">
                 <MenuItem Header="_Zamówienia"/>
                 <MenuItem Header="_Produkty"/>
@@ -70,7 +71,10 @@
             </MenuItem>
         </Menu>
 
-        <ToolBar Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource MainBg}">
+        <ToolBar Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource MainBg}" Margin="0,0,0,874" Grid.RowSpan="2">
+            <ToggleButton Style="{StaticResource ToolBarToggleButtonStyle}"  ToolTip="Dodaj">
+                <Image Source="../ViewResources/images/icons/floppy-disk-regular.png" />
+            </ToggleButton>
             <ToggleButton Style="{StaticResource ToolBarToggleButtonStyle}"  ToolTip="Dodaj">
                 <Image Source="../ViewResources/images/icons/plus-solid.png" />
             </ToggleButton>
@@ -127,7 +131,7 @@
                     />
 
         </Border>
-        <Border Grid.Column="1" Grid.Row="2">
+        <Border Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2">
             <HeaderedContentControl
                     Header="Workspace"
                     Content="{Binding Workspaces}"
@@ -138,7 +142,7 @@
         </Border>
 
 
-        <StatusBar Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource Footer}">
+        <StatusBar Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" Style="{StaticResource Footer}" Margin="0,874,0,0" Grid.RowSpan="2">
             <StatusBarItem>
                 <TextBlock>Andrzej Błażejowski</TextBlock>
             </StatusBarItem>
