@@ -15,9 +15,9 @@
     <None Remove="file-invoice-dollar-solid.png" />
     <None Remove="filter-solid.png" />
     <None Remove="gear-solid.png" />
-    <None Remove="images\icons\bell.png" />
-    <None Remove="images\icons\minus-solid.png" />
-    <None Remove="images\icons\question.png" />
+    <None Remove="ViewResources\images\icons\bell.png" />
+    <None Remove="ViewResources\images\icons\minus-solid.png" />
+    <None Remove="ViewResources\images\icons\question.png" />
     <None Remove="list-solid.png" />
     <None Remove="minus-solid.png" />
     <None Remove="person-digging-solid.png" />
@@ -25,18 +25,22 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="images\icons\file-invoice-dollar-solid.png" />
-    <Resource Include="images\icons\arrow-up-wide-short-solid.png" />
-    <Resource Include="images\icons\arrow-up-short-wide-solid.png" />
-    <Resource Include="images\icons\filter-solid.png" />
-    <Resource Include="images\icons\gear-solid.png" />
-    <Resource Include="images\icons\arrows-rotate-solid.png" />
-    <Resource Include="images\icons\bell.png" />
-    <Resource Include="images\icons\minus-solid.png" />
-    <Resource Include="images\icons\question.png" />
-    <Resource Include="images\icons\plus-solid.png" />
-    <Resource Include="images\icons\list-solid.png" />
-    <Resource Include="images\icons\person-digging-solid.png" />
+    <Resource Include="ViewResources\images\icons\file-invoice-dollar-solid.png" />
+    <Resource Include="ViewResources\images\icons\arrow-up-wide-short-solid.png" />
+    <Resource Include="ViewResources\images\icons\arrow-up-short-wide-solid.png" />
+    <Resource Include="ViewResources\images\icons\filter-solid.png" />
+    <Resource Include="ViewResources\images\icons\gear-solid.png" />
+    <Resource Include="ViewResources\images\icons\arrows-rotate-solid.png" />
+    <Resource Include="ViewResources\images\icons\bell.png" />
+    <Resource Include="ViewResources\images\icons\minus-solid.png" />
+    <Resource Include="ViewResources\images\icons\question.png" />
+    <Resource Include="ViewResources\images\icons\plus-solid.png" />
+    <Resource Include="ViewResources\images\icons\list-solid.png" />
+    <Resource Include="ViewResources\images\icons\person-digging-solid.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>

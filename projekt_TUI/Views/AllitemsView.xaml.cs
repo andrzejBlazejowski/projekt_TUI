@@ -13,14 +13,11 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace projekt_TUI
+namespace projekt_TUI.Views
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+    public partial class AllItemsView : UserControl
     {
-        public MainWindow()
+        public AllItemsView()
         {
             InitializeComponent();
         }

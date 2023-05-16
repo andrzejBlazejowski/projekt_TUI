@@ -1,4 +1,5 @@
-﻿using System;
+﻿using projekt_TUI.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,12 @@ namespace projekt_TUI
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+            MainWindow window = new MainWindow();
+            window.DataContext = new MainWindowViewModel();
+            window.Show();
+        }
     }
 }
