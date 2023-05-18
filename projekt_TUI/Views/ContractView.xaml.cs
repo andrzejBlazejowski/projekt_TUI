@@ -15,9 +15,9 @@ using System.Windows.Shapes;
 
 namespace projekt_TUI.Views
 {
-    public partial class AllItemsView : UserControl
+    public partial class ContractView : UserControl
     {
-        public AllItemsView()
+        public ContractView()
         {
             InitializeComponent();
         }

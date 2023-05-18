@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="projekt_TUI.Views.AllItemsView"
+﻿<UserControl x:Class="projekt_TUI.Views.ContractView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -185,8 +185,8 @@
 
                 <Expander Grid.Column="2" Header="Obsługa" IsExpanded="True">
                     <StackPanel>
-                        <RadioButton Content="Przed sprzedażą" GroupName="Options" Checked="RadioButton_Checked" />
-                        <RadioButton Content="Po sprzedaży" GroupName="Options" Checked="RadioButton_Checked" />
+                        <RadioButton Content="Przed sprzedażą" GroupName="Options"/>
+                        <RadioButton Content="Po sprzedaży" GroupName="Options"/>
                     </StackPanel>
                 </Expander>
 
