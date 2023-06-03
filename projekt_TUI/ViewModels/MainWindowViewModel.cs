@@ -1,4 +1,5 @@
 ﻿using projekt_TUI.Helpers;
+using projekt_TUI.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -21,6 +22,13 @@ namespace projekt_TUI.ViewModels
             get
             {
                 return new BaseCommand(() => CreateView(new NewItemViewModel()));
+            }
+        }
+        public ICommand NewContractCommand
+        {
+            get
+            {
+                return new BaseCommand(() => CreateView(new ContractViewModel()));
             }
         }
         public ICommand ItemsCommand
@@ -46,10 +54,14 @@ namespace projekt_TUI.ViewModels
         {
             return new List<CommandViewModel>
             {
-                new CommandViewModel("Items",new BaseCommand(showAllItems)),
+                new CommandViewModel("itemy",new BaseCommand(showAllItems)),
                 new CommandViewModel("Item",new BaseCommand(()=>CreateView(new NewItemViewModel()))),
+                new CommandViewModel("Kontrakt",new BaseCommand(()=>CreateView(new ContractViewModel()))),
+                new CommandViewModel("Pracownik",new BaseCommand(()=>CreateView(new EmployeeViewModel()))),
+                new CommandViewModel("Faktury",new BaseCommand(()=>CreateView(new AllInvoicesViewModel()))),
             };
         }
+
         #endregion
 
         #region Zakładki

@@ -81,8 +81,18 @@
                         <Label >Temat : </Label>
                         <TextBox>Przygotowanie Oferty handlowej</TextBox>
                     </StackPanel>
-                    <TextBlock Height="400">
-                        
+                    <TextBlock Height="200">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis lacinia ultricies, nunc nisl ultricies nu
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis lacinia ultricies, nunc nisl ultricies nu
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis lacinia ultricies, nunc nisl ultricies nu
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis lacinia ultricies, nunc nisl ultricies nu
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis lacinia ultricies, nunc nisl ultricies nu
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis lacinia ultricies, nunc nisl ultricies nu
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis lacinia ultricies, nunc nisl ultricies nu
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis lacinia ultricies, nunc nisl ultricies nu
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis lacinia ultricies, nunc nisl ultricies nu
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis lacinia ultricies, nunc nisl ultricies nu
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl quis lacinia ultricies, nunc nisl ultricies nu
                     </TextBlock>
                 </StackPanel>
             </Expander>

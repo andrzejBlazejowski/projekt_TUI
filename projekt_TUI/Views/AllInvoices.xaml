@@ -1,0 +1,149 @@
+﻿<UserControl x:Class="projekt_TUI.Views.AllInvoicesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:projekt_TUI.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="880" d:DesignWidth="1450">
+    <Grid Background="White">
+        <StackPanel Orientation="Vertical" Background="white">
+            <Grid>
+                <DataGrid Width="1450" ItemsSource="{Binding DocumentItems}" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Numer Dokumentu" Binding="{Binding NumerDokumentu}"/>
+                        <DataGridTextColumn Header="Status" Binding="{Binding Status}"/>
+                        <DataGridTextColumn Header="Data wystawienia" Binding="{Binding DataWystawienia}"/>
+                        <DataGridTextColumn Header="Magazyn" Binding="{Binding Magazyn}"/>
+                        <DataGridTextColumn Header="Kontrachent" Binding="{Binding Kontrachent}"/>
+                        <DataGridTextColumn Header="Waluta" Binding="{Binding Waluta}"/>
+                        <DataGridTextColumn Header="NIP" Binding="{Binding NIP}"/>
+                        <DataGridTextColumn Header="Miasto" Binding="{Binding Miasto}"/>
+                        <DataGridTextColumn Header="Netto" Binding="{Binding Netto}"/>
+                        <DataGridTextColumn Header="Brutto" Binding="{Binding Brutto}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+            <Expander Header="Kliknij aby rozwinąć lub zwinąć filtr Zawansowany">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                       
+                    <Grid Grid.Column="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="4*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            
+                            <Label Grid.Column="0" Grid.Row="0">Magazyn</Label>
+                            <ComboBox Grid.Column="1" Grid.Row="0">
+                                <ComboBoxItem IsSelected="True">Rzeszów 02</ComboBoxItem>
+                            </ComboBox>
+                            
+                            <Label Grid.Column="0" Grid.Row="1">Kontyrachent:</Label>
+                            <ComboBox Grid.Column="1" Grid.Row="1">
+                                <ComboBoxItem IsSelected="True">Konrad Gogoliński</ComboBoxItem>
+                            </ComboBox>
+                            
+                            <Label Grid.Column="0" Grid.Row="2">Windykacja:</Label>
+                            <ComboBox Grid.Column="1" Grid.Row="2">
+                                <ComboBoxItem IsSelected="True">Wszystkie</ComboBoxItem>
+                            </ComboBox>
+
+                        </Grid>
+
+                    <StackPanel Orientation="Vertical" Grid.Column="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <CheckBox Grid.Column="0" Content="Data Sprzedaży : " IsChecked="True"/>
+                            <Label Grid.Column="1" >od:</Label>
+                            <DatePicker Grid.Column="2"></DatePicker>
+                            <Label Grid.Column="3">do:</Label>
+                            <DatePicker Grid.Column="4"></DatePicker>
+
+                        </Grid>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <CheckBox Grid.Column="0" Content="Data Wystawienia : " IsChecked="True"/>
+                            <Label Grid.Column="1" >od:</Label>
+                            <DatePicker Grid.Column="2"></DatePicker>
+                            <Label Grid.Column="3">do:</Label>
+                            <DatePicker Grid.Column="4"></DatePicker>
+
+                        </Grid>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <CheckBox Grid.Column="0" Content="Kwota : " IsChecked="True"/>
+                            <Label Grid.Column="1" >od:</Label>
+                            <TextBox Grid.Column="2" IsEnabled="True">0</TextBox>
+                            <Label Grid.Column="3">do:</Label>
+                            <TextBox Grid.Column="4" IsEnabled="True">0</TextBox>
+
+                        </Grid>
+
+                    </StackPanel>
+                    
+                    <StackPanel Orientation="Vertical" Grid.Column="2">
+                        <Label >Schemat Numeracji : </Label>
+                        <ComboBox>
+                            <ComboBoxItem IsSelected="True">Wszystkie</ComboBoxItem>
+                        </ComboBox>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <CheckBox Grid.Column="0" Content="Numery" IsChecked="True"/>
+                            <Label Grid.Column="1" >od: </Label>
+                            <TextBox Grid.Column="2" IsEnabled="True">0</TextBox>
+                            <Label Grid.Column="3">do:</Label>
+                            <TextBox Grid.Column="4" IsEnabled="True">0</TextBox>
+                            
+                        </Grid>
+
+                    </StackPanel>
+                </Grid>
+            </Expander>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Filtruj" Width="100" Height="30" Margin="10"/>
+                <Button Content="Wyczyść" Width="100" Height="30" Margin="10"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

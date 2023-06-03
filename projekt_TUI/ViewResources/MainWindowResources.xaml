@@ -14,7 +14,21 @@
         <vw:NewItemView/>
     </DataTemplate>
 
-<!--MAIN WINDOW ELEMENTS STYLES -->
+    <DataTemplate DataType="{x:Type vm:ContractViewModel}">
+        <vw:ContractView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:EmployeeViewModel}">
+        <vw:EmployeeView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:AllInvoicesViewModel}">
+        <vw:AllInvoicesView/>
+    </DataTemplate>
+
+
+
+    <!--MAIN WINDOW ELEMENTS STYLES -->
     <Style x:Key="ToolBarToggleButtonStyle" TargetType="ToggleButton">
         <Setter Property="Width" Value="35"/>
         <Setter Property="Height" Value="35"/>
@@ -90,8 +104,59 @@
     </Style>
 
 
-    <!--END OFMAIN WINDOW ELEMENTS STYLES -->
+    <!--END OF MAIN WINDOW ELEMENTS STYLES -->
 
+
+
+    <!--BUTTON STYLES -->
+    <Style TargetType="Button">
+        <Setter Property="Background" Value="#CDFCF6"/>
+        <Setter Property="Padding" Value="7"/>
+        <Setter Property="Margin" Value="1"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="FontFamily" Value="Comic Sans MS"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Height" Value="30"/>
+    </Style>
+    <!--END BUTTON STYLES -->
+
+
+    <!--ComboBox STYLES -->
+    <Style TargetType="ComboBox">
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Background" Value="#CDFCF6"/>
+    </Style>
+    <!--END ComboBox STYLES -->
+
+
+    <!--TextBlock STYLES -->
+    <Style TargetType="TextBlock">
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Background" Value="#CDFCF6"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+    </Style>
+    <!--END TextBlock STYLES -->
+    
+    <!--TextBox STYLES -->
+    <Style TargetType="TextBox">
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Background" Value="#CDFCF6"/>
+    </Style>
+    <!--END TextBox STYLES -->
+
+    <!--Expander STYLES -->
+    <Style TargetType="Expander">
+        <Setter Property="Margin" Value="5"/>
+    </Style>
+    <!--END Expander STYLES -->
+
+    <!--RadioButton STYLES -->
+    <Style TargetType="RadioButton">
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+    <!--END RadioButton STYLES -->
 
 
 

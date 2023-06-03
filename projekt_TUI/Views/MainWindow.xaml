@@ -17,13 +17,13 @@
             <ColumnDefinition Width="139*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
-        <Menu Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="3" Padding="5" Margin="0,0,0,40" Grid.RowSpan="2">
+        <Menu Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="3" Padding="2" Grid.RowSpan="2">
             <MenuItem Header="_Sprzedaż" Style="{StaticResource MenuItemWithPadding}">
                 <MenuItem Header="_Zamówienia"/>
                 <MenuItem Header="_Produkty"/>
@@ -71,7 +71,7 @@
             </MenuItem>
         </Menu>
 
-        <ToolBar Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource MainBg}" Margin="0,0,0,874" Grid.RowSpan="2">
+        <ToolBar Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource MainBg}" Margin="0,0,0,0">
             <ToggleButton Style="{StaticResource ToolBarToggleButtonStyle}"  ToolTip="Dodaj">
                 <Image Source="../ViewResources/images/icons/floppy-disk-regular.png" />
             </ToggleButton>

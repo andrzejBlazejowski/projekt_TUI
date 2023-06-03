@@ -39,8 +39,4 @@
     <Resource Include="ViewResources\images\icons\person-digging-solid.png" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
-
 </Project>

@@ -1,0 +1,162 @@
+﻿<UserControl x:Class="projekt_TUI.Views.EmployeeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <TabControl>
+        <TabItem Header="_1 ogólne">
+            <ScrollViewer>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="107*"/>
+                        <ColumnDefinition Width="658*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Border Grid.ColumnSpan="2" Margin="2,2,2,2">
+                        <Grid Grid.Row="0" Grid.Column="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0" Content="Zapis aktualny Od:"/>
+                            <DatePicker Grid.Column="1"/>
+                            <Button Grid.Column="3" Content="Centrum podleg."/>
+                            <ComboBox Grid.Column="4">
+                                <ComboBoxItem Content="FIRMA" IsSelected="True"/>
+                            </ComboBox>
+                            <CheckBox Grid.Column="5" Content="Archiwalny"/>
+                        </Grid>
+                    </Border>
+                    <Expander Header="Wydział/Wieloetatowość" IsExpanded="True" Grid.Row="1" Grid.ColumnSpan="2" Margin="2,2,2,2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Grid.Row="0" Grid.Column="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Button Content="Wydział :" MinWidth="100"/>
+                                <ComboBox Grid.Column="4">
+                                    <ComboBoxItem Content="FIRMA" IsSelected="True"/>
+                                </ComboBox>
+                            </Grid>
+
+
+                            <CheckBox Grid.Row="1" Grid.Column="0" Content="Etat podstawowy dlapracownikazatrud.na wielu etatach"/>
+
+                            <Grid Grid.Row="1" Grid.Column="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Button Content="Etat dodatkowy dla :"/>
+                                <ComboBox Grid.Column="4">
+                                    <ComboBoxItem Content="FIRMA" IsSelected="True"/>
+                                </ComboBox>
+                            </Grid>
+                        </Grid>
+                    </Expander>
+
+                    <Expander Header="Dane Personalne" IsExpanded="True" Grid.Row="3" Grid.ColumnSpan="2" Margin="2,2,2,2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Row="0" Grid.Column="0" Content="Aktonim: "/>
+                            <TextBox Grid.Row="0" Grid.Column="1"/>
+
+                            <Label Grid.Row="0" Grid.Column="2" Content="Nazwisko: "/>
+                            <TextBox Grid.Row="0" Grid.Column="3" Text="Murawska"/>
+
+
+                            <Label Grid.Row="1" Grid.Column="0" Content="Imie: "/>
+                            <TextBox Grid.Row="1" Grid.Column="1" Text="Magdalena"/>
+
+                            <Label Grid.Row="1" Grid.Column="2" Content="Drugie Imie: "/>
+                            <TextBox Grid.Row="1" Grid.Column="3"/>
+
+
+                            <Label Grid.Row="2" Grid.Column="0" Content="PESEL: "/>
+                            <TextBox Grid.Row="2" Grid.Column="1" Text="23423423434"/>
+
+                            <Label Grid.Row="2" Grid.Column="2" Content="NIP"/>
+                            <Grid Grid.Row="2" Grid.Column="3" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="44"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <ComboBox Grid.Row="0" Grid.Column="0"  Width="40">
+                                    <ComboBoxItem Content="" IsSelected="True"/>
+                                </ComboBox>
+                                <TextBox Grid.Row="0" Grid.Column="1" Text=""/>
+                            </Grid>
+
+
+                            <Label Grid.Row="3" Grid.Column="0" Content="Data urodzenia: "/>
+                            <DatePicker Grid.Row="3" Grid.Column="1" Text="" HorizontalAlignment="Left"/>
+
+                            <Button Grid.Row="3" Grid.Column="2" Content="Miejsce Urodzenia"/>
+                            <ComboBox Grid.Row="3" Grid.Column="3">
+                                <ComboBoxItem Content="" IsSelected="True"/>
+                            </ComboBox>
+
+                            <Label Grid.Row="4" Grid.Column="0" Content="Imie ojca: "/>
+                            <TextBox Grid.Row="4" Grid.Column="1" Text=""/>
+
+                            <Label Grid.Row="4" Grid.Column="2" Content="Imie matki: "/>
+                            <TextBox Grid.Row="4" Grid.Column="3" Text=""/>
+
+                            <Label Grid.Row="5" Grid.Column="0" Content="Nazwisko rodoew: "/>
+                            <TextBox Grid.Row="5" Grid.Column="1" Text=""/>
+
+                            <Label Grid.Row="5" Grid.Column="2" Content="nazwisko rodowe matki: "/>
+                            <TextBox Grid.Row="5" Grid.Column="3" Text=""/>
+
+
+                        </Grid>
+                    </Expander>
+                </Grid>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem Header="_2 Nr ident./podatki">
+        </TabItem>
+        <TabItem Header="_3 Etat">
+        </TabItem>
+    </TabControl>
+</UserControl>
