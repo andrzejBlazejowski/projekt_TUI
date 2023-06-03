@@ -60,7 +60,8 @@ namespace projekt_TUI.ViewModels
                 new CommandViewModel("Pracownik",new BaseCommand(()=>CreateView(new EmployeeViewModel()))),
                 new CommandViewModel("Faktury",new BaseCommand(()=>CreateView(new AllInvoicesViewModel()))),
                 new CommandViewModel("Nowa faktura",new BaseCommand(()=>CreateView(new InvoiceViewModel()))),
-                new CommandViewModel("Nowa Pozycja Cennika",new BaseCommand(()=>CreateView(new PriceListItemViewModel()))),
+                new CommandViewModel("Nowa Poz. Cennika",new BaseCommand(()=>CreateView(new PriceListItemViewModel()))),
+                new CommandViewModel("Złóż Zl. serwisowe",new BaseCommand(()=>CreateView(new ServiceOrderViewModel()))),
             };
         }
 

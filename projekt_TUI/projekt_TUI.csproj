@@ -40,6 +40,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\ServiceOrderView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\PriceListItemView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
