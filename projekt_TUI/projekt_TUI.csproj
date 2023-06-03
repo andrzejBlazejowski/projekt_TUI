@@ -39,4 +39,10 @@
     <Resource Include="ViewResources\images\icons\person-digging-solid.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Views\InvoiceView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>

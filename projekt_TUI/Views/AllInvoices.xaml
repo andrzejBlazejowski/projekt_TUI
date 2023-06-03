@@ -24,7 +24,7 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>
-            <Expander Header="Kliknij aby rozwinąć lub zwinąć filtr Zawansowany">
+            <Expander IsExpanded="True" Header="Kliknij aby rozwinąć lub zwinąć filtr Zawansowany">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>

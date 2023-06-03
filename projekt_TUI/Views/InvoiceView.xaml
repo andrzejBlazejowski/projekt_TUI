@@ -1,0 +1,203 @@
+﻿<UserControl x:Class="projekt_TUI.Views.InvoiceView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:projekt_TUI.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="880" d:DesignWidth="1450">
+
+    <TabControl>
+        <TabItem Header="_1 ogólne">
+            <StackPanel Orientation="Vertical">
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <StackPanel Grid.Column="0" Orientation="Horizontal">
+                        <Label Content="Dokument: "/>
+                        <ComboBox>
+                            <ComboBoxItem Content="FA" IsSelected="True"/>
+                        </ComboBox>
+                    </StackPanel>
+                    
+                    <StackPanel Grid.Column="1" Orientation="Horizontal">
+                        <Label Content="Numer: "/>
+                        <TextBox Text="FA"/>
+                        <TextBox Text="32"/>
+                        <TextBox Text="2020"/>
+                    </StackPanel>
+                    
+                    <StackPanel Grid.Column="2" Orientation="Horizontal">
+                        <Label Content="Wartość sprzedaży z ostatnich 3. miesięcy: 67 234 23 "/>
+                    </StackPanel>
+                </Grid>
+
+                <Expander IsExpanded="True" Header="Dane generyczne">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="4*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="0" Grid.Column="0" Content="Kontrachent: "/>
+                        <ComboBox Grid.Row="0" Grid.Column="1">
+                            <ComboBoxItem Content="Eustachy Sp. z o.o." IsSelected="True"/>
+                        </ComboBox>
+                        <TextBox Grid.Row="0" Grid.Column="2" IsReadOnly="True" Text="Eustachy Sp. z o.o. Wrocław Aleja Bielany 23/76"/>
+
+                        <Label Grid.Row="1" Grid.Column="0" Content="Kategoria: "/>
+                        <ComboBox Grid.Row="1" Grid.Column="1">
+                            <ComboBoxItem Content="Sprzedaż Krajowa" IsSelected="True"/>
+                        </ComboBox>
+                        <TextBox Grid.Row="1" Grid.Column="2" IsReadOnly="True"  Text="Sprzedaż Krajowa Wrocław Aleja Bielany 23/76"/>
+
+                        <Label Grid.Row="2" Grid.Column="0" Content="Magazyn: "/>
+                        <ComboBox Grid.Row="2" Grid.Column="1">
+                            <ComboBoxItem Content="Rzeszów 01" IsSelected="True"/>
+                        </ComboBox>
+                        <TextBox Grid.Row="2" Grid.Column="2" IsReadOnly="True" Text="Rzeszów 01 ul. Słoneczna 6 / 34"/>
+
+                    </Grid>
+                </Expander>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Expander Header="Daty i Wartości" IsExpanded="True">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
+                                </Grid.RowDefinitions>
+
+                                <Label Grid.Column="0" Grid.Row="0">Data Wsytawienia :</Label>
+                                <DatePicker Grid.Column="1" Grid.Row="0"></DatePicker>
+
+
+                                <Label Grid.Column="0" Grid.Row="1">Data Sprzedaży :</Label>
+                                <DatePicker Grid.Column="1" Grid.Row="1"></DatePicker>
+
+                                <Label Grid.Column="0" Grid.Row="2">Faktura liczona od :</Label>
+                                <ComboBox Grid.Column="1" Grid.Row="2">
+                                    <ComboBoxItem IsSelected="True">Netto</ComboBoxItem>
+                                </ComboBox>
+
+                                <Label Grid.Column="0" Grid.Row="3">Po terminie :</Label>
+                                <TextBox Grid.Column="1" Grid.Row="3" IsEnabled="True">0</TextBox>
+
+
+                            </Grid>
+
+                            <Grid Grid.Column="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
+                                </Grid.RowDefinitions>
+
+                                <Label Grid.Column="0" Grid.Row="0">Rabat :</Label>
+                                <TextBox Grid.Column="1" Grid.Row="0" IsEnabled="True">4,96%</TextBox>
+
+                                <Label Grid.Column="0" Grid.Row="1">Płatność:</Label>
+                                <ComboBox Grid.Column="1" Grid.Row="1">
+                                    <ComboBoxItem IsSelected="True">Przelew</ComboBoxItem>
+                                </ComboBox>
+
+                                <Label Grid.Column="0" Grid.Row="2">Termin 7 dni :</Label>
+                                <DatePicker Grid.Column="1" Grid.Row="2"></DatePicker>
+
+                                <Label Grid.Column="0" Grid.Row="3">Zadłużenie :</Label>
+                                <TextBox Grid.Column="1" Grid.Row="3" IsEnabled="True">0</TextBox>
+
+                            </Grid>
+
+                            <Grid Grid.Column="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
+                                </Grid.RowDefinitions>
+
+                                <Label Grid.Column="0" Grid.Row="0">Netto :</Label>
+                                <TextBox Grid.Column="1" Grid.Row="0" IsEnabled="True">324,4 PLN</TextBox>
+
+                                <Label Grid.Column="0" Grid.Row="1">Razem :</Label>
+                                <TextBox Grid.Column="1" Grid.Row="1" IsEnabled="True">32 234,5 PLN</TextBox>
+
+                                <Label Grid.Column="0" Grid.Row="2">Zapłacono :</Label>
+                                <TextBox Grid.Column="1" Grid.Row="2" IsEnabled="True">32,5 PLN</TextBox>
+
+                                <Label Grid.Column="0" Grid.Row="3">Pozostaje :</Label>
+                                <TextBox Grid.Column="1" Grid.Row="3" IsEnabled="True"> 432,5 PLN</TextBox>
+
+                            </Grid>
+                        </Grid>
+                    </Expander>
+                    
+                    <Expander Grid.Column="1" Header="MPP" IsExpanded="True">
+                        <StackPanel Orientation="Vertical">
+                            <CheckBox Content="MPP - podzielona płatność"/>
+                            <Label Content="Wartość podlegające MPP"/>
+                            <TextBox IsEnabled="True">432,5 PLN</TextBox>
+                        </StackPanel>
+                    </Expander>
+                </Grid>
+
+                <Grid>
+                    <DataGrid ItemsSource="{Binding Commodities}" x:Name="dataGrid" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Kod" Binding="{Binding Kod}" />
+                            <DataGridTextColumn Header="Nazwa" Binding="{Binding Nazwa}" />
+                            <DataGridTextColumn Header="Ilość" Binding="{Binding Ilosc}" />
+                            <DataGridTextColumn Header="Jm" Binding="{Binding Jm}" />
+                            <DataGridTextColumn Header="Rabat" Binding="{Binding Rabat}" />
+                            <DataGridTextColumn Header="Cena" Binding="{Binding Cena}" />
+                            <DataGridTextColumn Header="Wartość" Binding="{Binding Wartosc}" />
+                            <DataGridTextColumn Header="Magazyn" Binding="{Binding Magazyn}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </StackPanel>
+        </TabItem>
+        <TabItem Header="_2 Kontrachent"></TabItem>
+        <TabItem Header="_3 Płatności"></TabItem>
+        <TabItem Header="_2 Dokumenty"></TabItem>
+        <TabItem Header="_2 Atrybuty/ JPK"></TabItem>
+    </TabControl>
+</UserControl>

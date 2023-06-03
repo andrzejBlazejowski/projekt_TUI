@@ -26,6 +26,10 @@
         <vw:AllInvoicesView/>
     </DataTemplate>
 
+    <DataTemplate DataType="{x:Type vm:InvoiceViewModel}">
+        <vw:InvoiceView/>
+    </DataTemplate>
+
 
 
     <!--MAIN WINDOW ELEMENTS STYLES -->
