@@ -197,7 +197,7 @@
         </TabItem>
         <TabItem Header="_2 Kontrachent"></TabItem>
         <TabItem Header="_3 Płatności"></TabItem>
-        <TabItem Header="_2 Dokumenty"></TabItem>
-        <TabItem Header="_2 Atrybuty/ JPK"></TabItem>
+        <TabItem Header="_4 Dokumenty"></TabItem>
+        <TabItem Header="_5 Atrybuty/ JPK"></TabItem>
     </TabControl>
 </UserControl>

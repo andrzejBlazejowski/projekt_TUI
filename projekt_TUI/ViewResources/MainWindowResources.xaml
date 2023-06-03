@@ -30,6 +30,10 @@
         <vw:InvoiceView/>
     </DataTemplate>
 
+    <DataTemplate DataType="{x:Type vm:PriceListItemViewModel}">
+        <vw:PriceListItemView/>
+    </DataTemplate>
+
 
 
     <!--MAIN WINDOW ELEMENTS STYLES -->
